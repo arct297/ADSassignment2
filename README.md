@@ -15,8 +15,3 @@ This repository contains a collection of Java classes implementing various funda
 ## Usage
 
 Each data structure can be instantiated and used in your Java application. The `Main.java` file includes examples of how to work with each data structure.
-
-To compile the classes, use the following command:
-
-```sh
-javac *.java
