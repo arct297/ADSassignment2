@@ -117,6 +117,17 @@ public class MyArrayList <T extends Comparable<T>> implements MyList<T>{
         size--; // Size incrementation.
     }
 
+    public T removeReturn(int index) {
+        validateIndex(index); // Checks possibility of index location into array.
+        T element = (T) arr[index];
+        for (int i = index; i < size - 1; i++) { // Elements shifting to left after removing.
+            arr[i] = arr[i + 1];
+        }
+        arr[size - 1] = null;
+        size--; // Size incrementation.
+        return element;
+    }
+
     // Remove first element from array.
     // Can throw exception if array is empty (see validateIndex method).
     @Override
